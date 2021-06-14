@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Isekai'd</name>
+		<description>Isekai'd Background</description>
+		<author url="">Blaine Simple</author>
+		<update version="0.0.1">
+			<file name="background-isekai'd.xml" url="" />
+		</update>
+	</info>
+
+
+	<element name="Isekai'd" type="Background" source="Anime in DnD" id="ID_HOMEBREW_BACKGROUND_ISEKAI">
+		<description>
+			<p>Many powerful creatures in the multiverse are looking for worthy individuals to alter the course of a specific world. The goals of this being could be known to you, or a complete mystery. Work with your DM to determine what the goals of this being are and the part you play in it.</p>
+			<p class="indent">Many powerful creatures in the multiverse are looking for worthy individuals to alter the course of a specific world. The goals of this being could be known to you, or a complete mystery. Work with your DM to determine what the goals of this being are and the part you play in it.</p>
+			<ul class="unstyled">
+				<li><strong>Skill Proficiencies:</strong>Survival, History</li>
+                <li><strong>Tool Proficiencies:</strong>Any 1 gaming set of your choice, likely something originating from the world you were from.</li>
+				<li><strong>Languages:</strong>Any 1 language the creature who brought you to this new world knows.</li>
+				<li><strong>Equipment:</strong>One set of fine clothes, 1 small trinket, and 5 pieces of currency. All of these items originate from the world you were from.</li>
+			</ul>
+			<div element="ID_BACKGROUND_FEATURE_CHOSEN_ONE" />
+			<h5>SUGGESTED CHARACTERISTICS</h5>
+		</description>
+		<setters>
+			<set name="short">Survival, History,</set>
+		</setters>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SURVIVAL" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_HISTORY" />
+			<grant type="Background Feature" id="ID_BACKGROUND_FEATURE_CHOSEN_ONE" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+			<select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+			<select type="List" name="Personality Trait" number="2">
+				<item id="1">I don't easily give up on my dreams.</item>
+				<item id="2">A particular person has taken my interest, and I try to be just like them.</item>
+				<item id="3">I try to be as prepared as possible for any situation.</item>
+				<item id="4">This world works similarly to a game I used to play in my old world, and I refer to that knowledge with every move I make.</item>
+				<item id="5">I struggle to show my emotions and always keep a level head.</item>
+				<item id="6">I take advantage of every moment and seize any opportunity for pleasures and comfort.</item>
+			</select>
+			<select type="List" name="Ideal">
+				<item id="1"><strong>Curious.</strong> This world is full of new things, and I seek to experience them all.(Lawful)</item>
+				<item id="2"><strong>Adventurous.</strong> An open world with quests, loot, and heroes? Count me in! (Good)</item>
+				<item id="3"><strong>Cautious. </strong> Who knows what awaits us in these strange lands? Every step taken should be thoroughly inspected. (Chaotic)</item>
+				<item id="4"><strong>Disrespect. </strong> Nothing in this world deserves my full respect or attention. (Lawful)</item>
+				<item id="5"><strong>Purpose. </strong> Everything that exists is a puzzle meant to be solved. I feel obligated to solve them all. (Lawful)</item>
+				<item id="6"><strong>Survival. </strong> I won't let myself or others get hurt due to reckless behavior. (Any)</item>
+			</select>
+			<select type="List" name="Bond">
+				<item id="1">My entire existence is for the one who brought me here.</item>
+				<item id="2">The people I met when I first arrived on this world mean the most to me.</item>
+				<item id="3">The family, friends, and life I used to live has gotten me homesick. I hope to return soon.</item>
+				<item id="4">The ones I'm closest to have hurt me the most.</item>
+				<item id="5">Ruling this world doesn't seem like a bad idea.</item>
+				<item id="6">A powerful entity seeks my ruin, one that I cannot stop alone.</item>
+			</select>
+			<select type="List" name="Flaw">
+				<item id="1">My special origins often lead me to belittle others with my pride.</item>
+				<item id="2">The people of this world are beautiful and charming; I tend to lose myself when around them.</item>
+				<item id="3">When things seem hopeless I often lose the will to continue fighting.</item>
+				<item id="4">Nothing will stop me from achieving my destiny.</item>
+				<item id="5">I overestimate the strength and wits of every opponent.</item>
+				<item id="6">I struggle to see the people of this world as freethinking creatures. To me I'm the only real person here.</item>
+			</select>
+		</rules>
+	</element>
+	
+	<element name="Feature: Chosen One" type="Background Feature" source="Anime in DnD" id="ID_HOMEBREW_BACKGROUND_FEATURE_CHOSEN_ONE">
+		<supports>Background Feature</supports>
+		<description>
+			<p>A being of immense power had brought you to this new world to serve a purpose. Because of this, you have an unnaturally close relationship with this being that attracts the attention of others.</p>
+			<p class="indent">Enemies and allies of this being can sense this connection from you. Allies may attempt to aid you in whatever way they can, while enemies are naturally hostile towards you.</p>
+		</description>
+		<sheet alt="Chosen One" />
+	</element>
+</elements>
